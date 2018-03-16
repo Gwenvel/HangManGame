@@ -10,9 +10,10 @@ using System;
 namespace HangMan.Data.Migrations
 {
     [DbContext(typeof(HangManContext))]
-    partial class HangManContextModelSnapshot : ModelSnapshot
+    [Migration("20180316161715_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
