@@ -47,14 +47,14 @@ namespace HangMan.Data{
         }
         public static void AddImages(HangManContext context) {
             var images = new List<Hang> {            
-                new Hang{HangId=1, HangMan="images/start.png"},
-                new Hang{HangId=2, HangMan="images/one.png"},
-                new Hang{HangId=3, HangMan="images/two.png"},
-                new Hang{HangId=4, HangMan="images/three.png"},
-                new Hang{HangId=5, HangMan="images/four.png"},
-                new Hang{HangId=6, HangMan="images/five.png"},
-                new Hang{HangId=7, HangMan="images/lastChance.png"},
-                new Hang{HangId=8, HangMan="images/gameOver.png"}
+                new Hang{HangId=1, HangMan="/images/start.png"},
+                new Hang{HangId=2, HangMan="/images/one.png"},
+                new Hang{HangId=3, HangMan="/images/two.png"},
+                new Hang{HangId=4, HangMan="/images/three.png"},
+                new Hang{HangId=5, HangMan="/images/four.png"},
+                new Hang{HangId=6, HangMan="/images/five.png"},
+                new Hang{HangId=7, HangMan="/images/lastChance.png"},
+                new Hang{HangId=8, HangMan="/images/gameOver.png"}
             };
 
             foreach (var image in images)
@@ -101,7 +101,9 @@ namespace HangMan.Data{
         public static void AddLine(HangManContext context) {
             var line = new Line();
              
-            new Line{LineId=1, Pic="images/line.png"};
+
+            line.LineId=1;
+            line.Pic="/images/line.png";
             
 
             context.Add(line);

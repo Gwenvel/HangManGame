@@ -1,8 +1,15 @@
 <div class="game">
     <h1>Hang them up</h1>
     <br>
+    <!-- <img src="controller.line.pic" alt=""> -->
+    <img  ng-repeat="x in controller.lines track by $index"  id="x" src="/images/line.png" alt="">
     <br>
     <img src="/images/start.png">
 
+    <!-- <p>{{controller.newWord}}</p> -->
+    <button ng-click="controller.theWord(controller.newWord)">Lets See</button>
 
+    <!-- <div ng-repeat="x in controller.lines track by $index"><img src="x" alt="" srcset=""></div> -->
+    <input type="text" ng-model="controller.input" id="">
+    <input type="submit" value="Submit" ng-click="controller.check()">
 </div>
